@@ -12,7 +12,7 @@ El formato de salida y respuesta será un JSON con el siguiente formato:
 
 {
 
- "operation": "tan",
+ "operation": "cos",
 
  "input":  3.141592,
 
