@@ -20,6 +20,19 @@ El formato de salida y respuesta será un JSON con el siguiente formato:
 
 }
 
+## Imagenes de consola AWS corriendo
+
+[Video programa en ejecución](https://youtu.be/eLRfh9ZUSsE)
+
+### Consola EC2
+![](img/img1.jpg)
+
+### Operacion Tangente
+![](img/img2.jpg)
+
+### Operacion EXP
+![](img/img3.jpg)
+
 ## Empezando e Instalando
 
 Entramos a la carpeta donde queremos guardar nuestro repositorio, en este caso Desktop
