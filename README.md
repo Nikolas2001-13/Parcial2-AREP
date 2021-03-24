@@ -38,6 +38,10 @@ Compilamos con maven
 
 `$ mvn package`
 
+Correr proyecto
+
+`$ mvn exec:java -Dexec.mainClass="edu.eci.arep.parcial.SparkWebServer"`
+
 Para ejecutar la aplicación
 
 `$ docker-compose up -d `

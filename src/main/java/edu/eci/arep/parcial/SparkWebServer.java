@@ -1,6 +1,8 @@
 package edu.eci.arep.parcial;
 
 import static spark.Spark.*;
+import com.google.gson.Gson;
+import org.json.simple.JSONObject;
 
 public class SparkWebServer {
     private static MathServices mathServices = new MathServices();
@@ -11,6 +13,7 @@ public class SparkWebServer {
      * @param args
      */
     public static void main(String[] args){
+        JSONObject jsonObject = new JSONObject();
         port(getPort());
 
         /**
@@ -18,7 +21,11 @@ public class SparkWebServer {
          */
         get("/tan", (req, res) -> {
             Double value = Double.valueOf(req.queryParams("value"));
-            return(mathServices.tan(value));
+            Double tanValue = mathServices.tan(value);
+            jsonObject.put("operation", "tan");
+            jsonObject.put("input", value);
+            jsonObject.put("output", tanValue);
+            return jsonObject.toJSONString();
         });
 
         /**
@@ -26,7 +33,11 @@ public class SparkWebServer {
          */
         get("/exp",(req, res) -> {
             Double value = Double.valueOf(req.queryParams("value"));
-            return(mathServices.exp(value));
+            Double expValue = mathServices.exp(value);
+            jsonObject.put("operation", "exp");
+            jsonObject.put("input", value);
+            jsonObject.put("output", expValue);
+            return jsonObject.toJSONString();
         });
     }
 
